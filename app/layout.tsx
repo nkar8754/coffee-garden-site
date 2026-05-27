@@ -20,7 +20,7 @@ export default function RootLayout({props}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable}`}>
-        {children}
+        {props.children}
       </body>
     </html>
   );
