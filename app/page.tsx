@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,7 +12,7 @@ const fadeUp = {
   }
 };
 
-const floating = {
+const floating: Variants = {
   initial: { y: 0, opacity: 0.25 },
   animate:{
     y: [-12, 12, -12],
@@ -426,7 +426,7 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-80"
