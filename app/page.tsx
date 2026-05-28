@@ -14,15 +14,15 @@ const fadeUp = {
 
 const floating = {
   initial: { y: 0, opacity: 0.25 },
-  animate: (i: number) => ({
+  animate:{
     y: [-12, 12, -12],
     opacity: [0.15, 0.35, 0.15],
     transition: {
-      duration: 6 + i,
+      duration: 6,
       repeat: Infinity,
       ease: "easeInOut"
     }
-  })
+  }
 };
 
 const particles = [
@@ -135,7 +135,6 @@ const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
       {particles.map((pos, i) => (
         <motion.div
           key={i}
-          custom={i as number}
           variants={floating}
           initial="initial"
           animate="animate"
