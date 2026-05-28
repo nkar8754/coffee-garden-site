@@ -16,7 +16,7 @@ export const metadata = {
   description: "Neighborhood coffee shop in Salt Lake City",
 };
 
-export default function RootLayout({props}) {
+export default function RootLayout(props) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable}`}>
