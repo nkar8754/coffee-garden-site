@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Cormorant_Garamond } from "next/font/google";
+import type { ReactNode } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,11 +17,15 @@ export const metadata = {
   description: "Neighborhood coffee shop in Salt Lake City",
 };
 
-export default function RootLayout(props) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable}`}>
-        {props.children}
+        {children}
       </body>
     </html>
   );
